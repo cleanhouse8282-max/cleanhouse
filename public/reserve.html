@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+
+<script src="/js/calendar.js"></script>
+<script src="/js/reserve.js"></script>
+
+</head>
+
+<body>
+
+<h2>예약하기</h2>
+
+<div id="calendar"></div>
+
+<div id="form" style="display:none">
+
+<select id="category" onchange="updatePrice()">
+
+<option value="12000">아파트입주청소</option>
+<option value="15000">상가</option>
+<option value="13000">사무실</option>
+<option value="0">기타</option>
+
+</select>
+
+<input id="size" type="number" placeholder="평수">
+
+<p id="priceInfo"></p> 
+
+<input id="name" placeholder="이름">
+<input id="address" placeholder="주소">
+<input id="phone" placeholder="연락처">
+<textarea id="request"></textarea>
+
+<button onclick="submitReservation()">예약확정</button>
+
+</div>
+
+</body>
+</html>
